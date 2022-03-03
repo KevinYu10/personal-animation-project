@@ -4,11 +4,13 @@
 
 int m;
 int r;
+int h;
 
 void setup() {
   size(600, 600);
   m = 0;
   r = 0;
+  h = 0;
 }
 
 void draw() {
@@ -18,7 +20,7 @@ void draw() {
   rect(0, 200, 600, 400);
   sky(0, 0);
   back(0, 0);
-  //window(0, 0);
+  //moutain(0, 0);
 }
 
 void sky(int x, int y) {
@@ -90,18 +92,6 @@ void back(int a, int b) {
   rect(m + 830, 260, 30, 20);
   fill(200, 215, 163);
   ellipse(m + 830, 300, 10, 10);
-  //mountain2
-  m = m - 2;
-  if (m < -1500) {
-  m = 1200;
-  }
-  fill(55, 237, 77);
-  triangle(m - 600, 360, m - 450, 110, m - 320, 360);
-  fill(21, 95, 12);
-  triangle(m - 450, 110, m - 320, 360, m - 340, 360);
-  triangle(m - 220, 100, m - 90, 360, m - 70, 360);
-  fill(55, 237, 77);
-  triangle(m - 400, 360, m - 220, 100, m - 90, 360);
   //railway
   fill(167, 166, 164);
   rect(r - 10, 420, 10, 20);
@@ -222,8 +212,15 @@ void back(int a, int b) {
 
 void window(int c, int d) {
   translate(c, d);
-  rect(0, 0, 600, 10);
-  rect(0, 0, 10, 600);
-  rect(590, 10, 10, 590);
-  rect(10, 590, 590, 10);
+  h = h - 2;
+  if (h < -1500) {
+  h = 1200;
+  }
+  fill(55, 237, 77);
+  triangle(h - 600, 360, h - 450, 110, h - 320, 360);
+  fill(21, 95, 12);
+  triangle(h - 450, 110, h - 320, 360, h - 340, 360);
+  triangle(h - 220, 100, h - 90, 360, h - 70, 360);
+  fill(55, 237, 77);
+  triangle(h - 400, 360, h - 220, 100, h - 90, 360);
 }
